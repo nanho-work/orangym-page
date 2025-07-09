@@ -1,5 +1,5 @@
 
-const prefix = ''
+const prefix = '/orangym-page';
 
 
 export default function FacilitySlider() {

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-const prefix = ''
+const prefix = '/orangym-page';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)

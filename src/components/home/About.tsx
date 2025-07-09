@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-const prefix = ''
+const prefix = '/orangym-page';
 
 export default function About() {
   return (

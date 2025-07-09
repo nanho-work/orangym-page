@@ -12,6 +12,8 @@ export const metadata = {
   }
 };
 
+const prefix = '/orangym-page';
+
 export default function FacilityPage() {
     return (
         <main className="bg-white text-gray-900 px-6 py-12">
@@ -27,9 +29,9 @@ export default function FacilityPage() {
                     <section>
                         <h2 className="text-2xl font-semibold text-orangym mb-4">인포메이션</h2>
                         <div className="carousel grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <img src="/info.jpg" alt="프론트1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
-                            <img src="/info2.jpg" alt="프론트2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
-                            <img src="/info3.jpg" alt="프론트3" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/info.jpg`} alt="프론트1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/info2.jpg`} alt="프론트2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/info3.jpg`} alt="프론트3" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
                         </div>
                         <p className="text-gray-600 mt-2">
                             쾌적하고 친절한 인포메이션 공간에서 모든 안내를 도와드립니다.
@@ -39,8 +41,8 @@ export default function FacilityPage() {
                     <section>
                         <h2 className="text-2xl font-semibold text-orangym mb-4">웨이트 존</h2>
                         <div className="carousel grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <img src="/w1.jpg" alt="웨이트기구1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
-                            <img src="/w2.jpg" alt="웨이트기구2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/w1.jpg`} alt="웨이트기구1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/w2.jpg`} alt="웨이트기구2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
                         </div>
                         <p className="text-gray-600 mt-2">
                             다양한 프리웨이트, 머신 웨이트 기구가 구비되어 있어 효율적인 근력 운동이 가능합니다.
@@ -51,8 +53,8 @@ export default function FacilityPage() {
                     <section>
                         <h2 className="text-2xl font-semibold text-orangym mb-4">유산소 존</h2>
                         <div className="carousel grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <img src="/u1.jpg" alt="유산소1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
-                            <img src="/u2.jpg" alt="유산소2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/u1.jpg`} alt="유산소1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/u2.jpg`} alt="유산소2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
                         </div>
                         <p className="text-gray-600 mt-2">
                             러닝머신, 싸이클, 계단오르기 등 고성능 유산소 장비가 마련되어 있습니다.
@@ -63,8 +65,8 @@ export default function FacilityPage() {
                     <section>
                         <h2 className="text-2xl font-semibold text-orangym mb-4">샤워실 / 락커룸</h2>
                         <div className="carousel grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <img src="/t1.jpg" alt="샤워실1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
-                            <img src="/t2.jpg" alt="샤워실2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/t1.jpg`} alt="샤워실1" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
+                            <img src={`${prefix}/t2.jpg`} alt="샤워실2" loading="lazy" className="rounded shadow w-full h-64 object-cover" />
                         </div>
                         <p className="text-gray-600 mt-2">
                             청결하고 넓은 샤워실과 락커룸이 제공되어 운동 후 상쾌한 마무리를 도와드립니다.

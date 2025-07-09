@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-const prefix = ''
+const prefix = '/orangym-page';
 
 
 export default function Hero() {

@@ -12,6 +12,7 @@ export const metadata = {
   }
 };
 
+const prefix = '/orangym-page';
 
 const MapEmbed = ({ html }: { html: string }) => (
   <div className="flex justify-center my-4">
@@ -23,7 +24,7 @@ export default function LocationPage() {
   return (
     <main className="min-h-screen bg-white py-12 px-6 text-center">
       <div className="max-w-5xl mx-auto bg-orange-400 rounded-b-lg flex justify-center">
-        <img src="/orangym_logo.png" alt="Orangym Logo" className="h-60" />
+       <img src={`${prefix}/orangym_logo.png`} alt="Orangym Logo" className="h-60" />
       </div>
       {/* 산성점 오시는 길 안내 */}
       <div className="flex items-center justify-center my-6">
@@ -45,7 +46,7 @@ export default function LocationPage() {
       </address>
       <div className="text-left text-sm text-gray-800 max-w-lg mx-auto mb-8">
         <div className="flex items-center mb-4">
-          <img src="/line8.png" alt="8호선 아이콘" className="w-6 h-6 mr-1 inline-block" />
+          <img src={`${prefix}/line8.png`} alt="8호선 아이콘" className="w-6 h-6 mr-1 inline-block" />
           <span>산성역 2번 출구에서 326m</span>
         </div>
 
@@ -136,7 +137,7 @@ export default function LocationPage() {
 
           <h3 className="font-semibold mt-4 mb-2">대중 교통 이용 시</h3>
           <p className="mb-2 flex items-center">
-            <img src="/line_suin.png" alt="수인분당선 아이콘" className="w-6 h-6 mr-1 inline-block" />
+            <img src={`${prefix}/line_suin.png`} alt="수인분당선 아이콘" className="w-6 h-6 mr-1 inline-block" />
             수원시청역 7번 출구에서 132m
           </p>
 

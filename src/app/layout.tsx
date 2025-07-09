@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingButton from '@/components/common/FloatingButton'
 
-const prefix = ''
+const prefix = '/orangym-page';
 
 export const metadata = {
   title: '오렌짐 | ORANGYM - PT & 피트니스',
