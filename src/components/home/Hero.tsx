@@ -9,6 +9,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+const prefix = ''
+
+
 export default function Hero() {
     useEffect(() => {
         AOS.init({
@@ -29,13 +32,13 @@ export default function Hero() {
                         className="h-full w-full"
                     >
                         <SwiperSlide className="relative w-full h-full">
-                            <Image src="/t1.jpg" alt="오렌짐1" fill className="object-cover" priority />
+                            <Image src={`${prefix}/t1.jpg`} alt="오렌짐1" fill className="object-cover" priority />
                         </SwiperSlide>
                         <SwiperSlide className="relative w-full h-full">
-                            <Image src="/w2.jpg" alt="오렌짐2" fill className="object-cover" priority />
+                            <Image src={`${prefix}/w2.jpg`} alt="오렌짐2" fill className="object-cover" priority />
                         </SwiperSlide>
                         <SwiperSlide className="relative w-full h-full">
-                            <Image src="/home3.jpeg" alt="오렌짐3" fill className="object-cover" priority />
+                            <Image src={`${prefix}/home3.jpeg`} alt="오렌짐3" fill className="object-cover" priority />
                         </SwiperSlide>
                     </Swiper>
                     <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
@@ -78,7 +81,7 @@ export default function Hero() {
                     <div className="bg-white rounded-lg shadow p-4 text-center w-full sm:w-[400px] h-auto mx-auto" data-aos="fade-right" data-aos-delay="0">
                         <div className="relative w-full h-[350px] sm:h-[400px] mb-4">
                             <Image
-                                src="/w2.jpg"
+                                src={`${prefix}/w2.jpg`}
                                 alt="일반 회원권"
                                 fill
                                 className="rounded-lg object-cover"
@@ -100,7 +103,7 @@ export default function Hero() {
                     <div className="bg-white rounded-lg shadow p-4 text-center w-full sm:w-[400px] h-auto mx-auto" data-aos="fade-up" data-aos-delay="300">
                         <div className="relative w-full h-[350px] sm:h-[400px] mb-4">
                             <Image
-                                src="/service.png"
+                                src={`${prefix}/service.png`}
                                 alt="VIP PT"
                                 fill
                                 className="rounded-lg object-cover"
@@ -122,7 +125,7 @@ export default function Hero() {
                     <div className="bg-white rounded-lg shadow p-4 text-center w-full sm:w-[400px] h-auto mx-auto" data-aos="fade-left" data-aos-delay="600">
                         <div className="relative w-full h-[350px] sm:h-[400px] mb-4">
                             <Image
-                                src="/h2.png"
+                                src={`${prefix}/h2.png`}
                                 alt="PT25"
                                 fill
                                 className="rounded-lg object-cover"

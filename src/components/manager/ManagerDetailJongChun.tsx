@@ -5,6 +5,8 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const prefix = ''
+
 const ManagerDetailJongchun: React.FC = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -25,7 +27,7 @@ const ManagerDetailJongchun: React.FC = () => {
         <div id="jongchun" className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center rounded-lg overflow-hidden">
             <div className="relative md:w-1/2 w-full h-auto max-w-md">
                 <Image
-                    src={imageUrl}
+                    src={`${prefix}${imageUrl}`}
                     alt={name}
                     width={600}
                     height={800}

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const prefix = ''
+
 const ManagerDetailSungJin: React.FC = () => {
     useEffect(() => {
         AOS.init({
@@ -31,7 +33,7 @@ PT 수업 만으로 끝나는 일회성 이벤트가 아니라 나 혼자서 스
             {/* Left: Image */}
             <div className="relative md:w-1/2 w-full h-auto max-w-md">
                 <Image
-                    src={imageUrl}
+                    src={`${prefix}${imageUrl}`}
                     alt={name}
                     width={600}
                     height={800}

@@ -1,4 +1,6 @@
-'use client'
+
+const prefix = ''
+
 
 export default function FacilitySlider() {
   const facilities = [
@@ -16,7 +18,7 @@ export default function FacilitySlider() {
           {facilities.map((f, i) => (
             <div key={i} className="bg-white rounded-lg shadow hover:shadow-md transition">
               <img
-                src={f.image}
+                src={`${prefix}${f.image}`}
                 alt={f.title}
                 className="w-full h-48 object-cover rounded-t-lg"
               />

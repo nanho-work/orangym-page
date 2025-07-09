@@ -5,6 +5,8 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const prefix = ''
+
 const ManagerDetailJuneho: React.FC = () => {
     useEffect(() => {
         AOS.init({
@@ -30,7 +32,7 @@ const ManagerDetailJuneho: React.FC = () => {
             {/* Left: Image */}
             <div className="relative md:w-1/2 w-full h-auto max-w-md">
                 <Image
-                    src={imageUrl}
+                    src={`${prefix}${imageUrl}`}
                     alt={name}
                     width={600}
                     height={800}

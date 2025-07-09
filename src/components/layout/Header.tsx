@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
+const prefix = ''
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -15,7 +17,7 @@ export default function Header() {
         {/* 로고 */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/mark.png"
+            src={`${prefix}/mark.png`}
             alt="오렌짐 심볼"
             width={140}
             height={140}

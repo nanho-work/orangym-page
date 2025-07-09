@@ -1,10 +1,12 @@
-'use client';
+
 
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+const prefix = ''
 
 const trainerImages = [
     '/manager/jongchun.png',
@@ -52,7 +54,7 @@ const ManagerCarousel = () => {
                     <div key={index} className="px-2">
                         <div className="rounded overflow-hidden shadow-lg">
                             <Image
-                                src={src}
+                                src={`${prefix}${src}`}
                                 alt={`트레이너 ${index + 1}`}
                                 width={300}
                                 height={450}

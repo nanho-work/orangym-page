@@ -1,6 +1,8 @@
-'use client'
+
 
 import Image from 'next/image'
+
+const prefix = ''
 
 export default function About() {
   return (
@@ -19,7 +21,7 @@ export default function About() {
         </div>
         <div className="flex-1">
           <Image
-            src="/about1.JPG"
+            src={`${prefix}/about1.JPG`}
             alt="오렌짐 소개 이미지"
             width={600}
             height={400}
@@ -32,7 +34,7 @@ export default function About() {
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mt-16">
         <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
           <Image
-            src="/about2.png"
+            src={`${prefix}/about2.png`}
             alt="ORANGYM 아이콘"
             width={600}
             height={400}
@@ -46,7 +48,7 @@ export default function About() {
 
         <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
           <Image
-            src="/about3.png"
+            src={`${prefix}/about3.png`}
             alt="헬스해유 아이콘"
             width={600}
             height={400}
