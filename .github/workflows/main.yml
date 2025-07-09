@@ -1,0 +1,61 @@
+name: Orangym Frontend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Orangym Frontend to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      # orangym 폴더에 배포 (디렉토리 삭제 안함)
+      - name: Upload Frontend to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "."
+          target: "~/orangym-frontend"
+          strip_components: 0
+
+      # Docker 빌드 및 배포
+      - name: Deploy Frontend via SSH & Docker
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            cd ~/orangym-frontend
+
+            echo "[🧼] 기존 컨테이너 중지 및 정리"
+            docker stop orangym_frontend_container || true
+            docker rm orangym_frontend_container || true
+            docker image prune -a -f
+            docker builder prune -f
+
+            echo "[🛠] Docker 이미지 빌드 시작"
+            docker build --no-cache -t orangym_frontend_image .
+
+            echo "[🚀] Docker 컨테이너 실행"
+            docker run -d \
+              --name orangym_frontend_container \
+              -p 3001:3000 \
+              --restart unless-stopped \
+              orangym_frontend_image
+
+            echo "[✅] 배포 완료"

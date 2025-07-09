@@ -1,0 +1,45 @@
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumGothic.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-loop {
+  animation: slide-loop 30s linear infinite;
+}
+
+body {
+  font-family: 'NanumGothic', sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* ✅ 히어로 섹션 전용 폰트 클래스 */
+.hero-font {
+  font-family: 'Noto Sans KR', serif;
+}
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
