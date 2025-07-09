@@ -3,6 +3,8 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingButton from '@/components/common/FloatingButton'
 
+const prefix = ''
+
 export const metadata = {
   title: '오렌짐 | ORANGYM - PT & 피트니스',
   description: '오렌짐 산성역점: 맞춤형 PT, 청결한 시설, 전문 트레이너와 함께 건강한 루틴을 만드세요.',
@@ -43,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${prefix}/favicon.ico`} />
       </head>
       <body>
         <Header />
