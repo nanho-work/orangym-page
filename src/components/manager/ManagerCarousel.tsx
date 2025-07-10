@@ -6,7 +6,7 @@ import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const prefix = '/orangym-page';
+const prefix = '';
 
 const trainerImages = [
     '/manager/jongchun.png',

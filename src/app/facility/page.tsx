@@ -12,7 +12,7 @@ export const metadata = {
   }
 };
 
-const prefix = '/orangym-page';
+const prefix = '';
 
 export default function FacilityPage() {
     return (

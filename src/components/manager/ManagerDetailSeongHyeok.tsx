@@ -5,7 +5,7 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const prefix = '/orangym-page';
+const prefix = '';
 
 const ManagerDetailSeongHyeok : React.FC = () => {
     useEffect(() => {

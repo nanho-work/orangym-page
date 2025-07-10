@@ -12,7 +12,7 @@ export const metadata = {
   }
 };
 
-const prefix = '/orangym-page';
+const prefix = '';
 
 const MapEmbed = ({ html }: { html: string }) => (
   <div className="flex justify-center my-4">
